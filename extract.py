@@ -26,3 +26,5 @@ for scenario in file_text.split('Scenario')[1:]:
 
 with open('output.txt', 'w+') as file:
     file.write(output_text)
+
+print("making the script generic")
