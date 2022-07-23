@@ -1,7 +1,7 @@
 # fileName = input('Please enter file name: ')
 import os
 
-ward = input("Give ward pointer to review only func_max_lowvcc timing report: ")
+ward = input("Give ward pointer to review report: ")
 ward.strip();
 area = os.getenv('PWD');
 fileName = 'report.txt'
@@ -11,6 +11,7 @@ input_file = open(full_path, 'r', encoding='utf8')
 
 file_text = input_file.read().split('\n\n\n')[1]
 
+#Give word to split and then continue to extract from file to report
 output_text = "Scenario           'func_max_lowvcc'\n"
 for scenario in file_text.split('Scenario')[1:]:
     if "           'func_max_lowvcc'" in scenario:
